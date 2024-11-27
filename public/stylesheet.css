@@ -1,0 +1,1038 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+}
+.banderole {
+    height: 20rem;
+    width: 100vw;
+    background-color: #6c0880 ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.banderole h1 {
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    align-self: center;
+    margin: 15px;
+}
+
+.bunny {
+    width: 5rem;
+    height: 7rem; 
+    border-radius: 50%;
+    border: 2px solid #000; 
+}
+
+.whitepaper {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 17px; 
+    right: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whitepaper:hover {
+    transform: rotate(10deg) translateX(5px) translateY(5px);
+    animation: shake 0.5s ease-in-out; 
+}
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg) translateX(0) translateY(0);
+    }
+    25% {
+        transform: rotate(10deg) translateX(5px) translateY(0);
+    }
+    50% {
+        transform: rotate(-10deg) translateX(-5px) translateY(0);
+    }
+    75% {
+        transform: rotate(10deg) translateX(5px) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0) translateY(0);
+    }
+}
+
+
+.diamond-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(90deg, #ff00e0, #00e0ff, #ffff00, #ff00e0);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: inherit;
+    -webkit-text-fill-color: transparent;
+    animation: diamond-sparkle 3s linear infinite; /* Animation scintillante du texte */
+}
+
+.flashy-text {
+    font-weight: bold;
+    text-transform: uppercase; /* Met tout en majuscule */
+    background: linear-gradient(45deg, #ff00e0, #00e0ff, #ffff00);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes diamond-sparkle {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes flashy-effect {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.8);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.diamond-text::before,
+.diamond-text::after {
+    display: none;
+}
+
+@media (max-width: 268px) {
+    h1 {
+        font-size: 1.5rem;
+        max-width: 90%;
+    }
+}
+
+@keyframes sparkle-animation {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+
+.vertical-scrole {
+    display: flex;
+    align-items: center;
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    height: 30px;
+    overflow: hidden;
+}
+
+
+.marquee {
+  display: flex;
+  width: 100vw;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+  animation: scroll-continuous 10s linear infinite;
+  margin-right: 1rem;
+  border-top: 2px dotted #FF00B7; 
+  border-bottom: 2px dotted #FF00B7;
+}
+
+.enddot {
+    margin-right: 3px;
+}
+
+@keyframes scroll-continuous {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-20%); 
+  }
+}
+
+.dickhead {
+    height: 6rem;
+    width: 7rem;
+    margin-left: 10px;
+    object-fit: contain;
+}
+
+.contract {
+    display: flex;              
+    align-items: center;        
+    color: #FF00B7;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 40%;
+    width: fit-content;
+    padding: 5px 10px; 
+    height: 20px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.contract:hover {
+    background-color: #FF00B7;
+    color: #00e0ff;
+}
+
+#address {
+    cursor: pointer;
+}
+
+#address:hover{
+    color: white;
+}
+
+.main{
+    background-color: rgb(25, 2, 71);
+    height: 100%;
+    width: 100vw;
+    color: blanchedalmond;
+    padding-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.market {
+    padding-top: 17px;
+}
+
+.widgets {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+
+.crypto-widget {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    background-color: #400761;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: wheat;
+    font-family: Arial, sans-serif;
+}
+
+.crypto-widget h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.percentage {
+    font-size: 16px;
+}
+
+.percentage .positive {
+    color: green;
+}
+
+.percentage .negative {
+    color: red;
+}
+
+#sol-price, #sol-change, #btc-price, #btc-change, #bsc-price, #bsc-change {
+    animation: blink 1s infinite;
+}
+
+#sol-price.loaded, #sol-change.loaded, #btc-price.loaded, #btc-change.loaded {
+    animation: none  !important;
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.supply {
+    text-align: center;
+    color: goldenrod;
+    border: solid 3px #ff00e0;
+    width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+
+
+.slogan {
+    margin: 0;
+    padding-bottom: 0;
+   font-size: xx-large;
+   text-transform: uppercase;
+   color: darkviolet;
+   text-align: center;
+   background: linear-gradient(90deg, #00f, #fff, #00f);
+   background-size: 200% 200%;
+   -webkit-background-clip: text;
+   background-clip: none;
+   -webkit-text-fill-color: transparent;
+   animation: water-glow 3s infinite;
+   position: relative;
+}
+
+@keyframes water-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.token-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.solana {
+    padding-bottom: 3rem;
+    margin: 0;
+    height: 3rem;
+    width: 6rem;
+}
+
+.blockchain {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #FF00B7;
+
+}
+
+.tokeno {
+    margin: 0;
+    padding: 0;
+}
+.tokenomics {
+    text-align: center;
+}
+
+canvas {
+    width: 400px;
+    height: 400px;
+    display: block;
+    box-sizing: border-box;
+}
+
+#myPieChart {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.tokenomics canvas {
+    max-width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+
+.tokenomics .percent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.percent span {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 10px;
+    color: black;
+    background-color: #6c0880;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
+h3.title {
+    font-family: fantasy;
+    text-transform: uppercase;
+    text-decoration: overline purple;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+    margin-top: 0;
+}
+
+h3.title:hover {
+    cursor: pointer;
+    color: crimson;
+    text-decoration: overline blanchedalmond;
+}
+
+.gold {
+    height: 7rem;
+    display: flex;
+    justify-self: center;
+}
+
+.buy {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3.buy {
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+
+.dex {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.roadmap {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.roadtitle{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: linear-gradient(to right, #470348, #b610c2);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: rgb(120, 24, 104);
+    animation: fadeIn 5s ease-in-out;
+}
+
+
+.roadmap-timeline {
+    position: relative;
+    margin: 5px auto;
+    max-width: 800px;
+    display: block;
+}
+
+.roadmap-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.roadmap-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.roadmap-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.roadmap-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+
+.roadmap-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    text-align: left;
+    margin: 0 35px;
+    font-size: 1rem;
+}
+
+.roadmap-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #71088b;
+}
+
+.roadmap-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gif {
+    height: 25rem;
+}
+
+.orca, .ray{
+    height: 4rem;
+    margin-right: 11px;
+}
+
+.wallet {
+    justify-self: center;
+
+}
+
+.notaxes {
+    color: purple;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    animation: pulse .3s infinite; 
+}
+
+.buysell {
+    font-size: 25px;
+}
+
+.notaxes:hover {
+    color: goldenrod;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+
+.owner {
+    color: rgb(74, 1, 72);
+    font-size: 50px;
+    text-decoration: underline purple;
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+.founder {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.media {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socs {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-self: center;
+    align-items: center;
+}
+
+
+.socials {
+    margin-top: 1rem;
+}
+
+footer {
+    color: rgb(93, 3, 93);
+    font-style: italic;
+}
+
+
+@media (max-width: 430px) and (max-height: 932px) {
+    
+
+    #myPieChart {
+        width: 200px !important;
+        height:200px !important;
+    }
+
+    .token-slogan {
+        margin-top: 20rem;
+    }
+
+    .supply {
+        text-align: center;
+        width: 100%;
+    }
+
+    .supply .h3 {
+        font-size: 18px;
+        line-height: 1.4; 
+        word-wrap: break-word; 
+    }
+ 
+    .market {
+        padding: 10px; 
+        text-align: center; 
+        margin-bottom: 12rem;
+        margin-top: 1rem;
+    }
+
+    .market .title {
+        font-size: 20px; 
+        margin-bottom: 10px; 
+    }
+
+    .market.widgets {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .crypto-widget {
+        border-radius: 8px; 
+        padding: 5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .crypto-widget h4 {
+        font-size: 18px; 
+        margin-bottom: 8px; 
+    }
+
+    .crypto-widget .price span,
+    .crypto-widget .percentage span {
+        font-size: 16px;
+    }
+
+    .bunny {
+        width: 70px;
+    }
+
+    .diamond-text {
+        font-size: 15px; 
+    }
+
+    .whitepaper {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 10px;
+    }
+
+    footer {
+        color: blanchedalmond;
+        font-style: italic;
+    }
+
+    .gif {
+        height: 10rem;
+    }
+}
+
+
+
+
+@media (max-width: 414px) and (max-height: 896px) {
+    
+
+    #myPieChart {
+        width: 200px !important;
+        height:200px !important;
+    }
+
+    .token-slogan {
+        margin-top: 20rem;
+    }
+
+    .supply {
+        text-align: center;
+        width: 100%;
+    }
+
+    .supply .h3 {
+        font-size: 18px;
+        line-height: 1.4; 
+        word-wrap: break-word; 
+    }
+ 
+    .market {
+        padding: 10px; 
+        text-align: center; 
+        margin-bottom: 12rem;
+        margin-top: 1rem;
+    }
+
+    .market .title {
+        font-size: 20px; 
+        margin-bottom: 10px; 
+    }
+
+    .market.widgets {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .crypto-widget {
+        border-radius: 8px; 
+        padding: 5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .crypto-widget h4 {
+        font-size: 18px; 
+        margin-bottom: 8px; 
+    }
+
+    .crypto-widget .price span,
+    .crypto-widget .percentage span {
+        font-size: 16px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .bunny {
+        width: 70px;
+    }
+
+    .diamond-text {
+        font-size: 15px; 
+    }
+
+    .whitepaper {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 10px;
+    }
+
+    footer {
+        color: blanchedalmond;
+        font-style: italic;
+    }
+
+    .gif {
+        height: 10rem;
+    }
+}
+
+
+@media (max-width: 897px) and (max-height: 719px) {
+    
+
+    #myPieChart {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+
+    .token-slogan {
+        margin-top: 20rem;
+    }
+
+
+    .supply {
+        text-align: center;
+        width: 100%;
+    }
+
+    .supply .h3 {
+        font-size: 18px;
+        line-height: 1.4; 
+        word-wrap: break-word; 
+    }
+ 
+    .market {
+        padding: 10px; 
+        text-align: center; 
+        margin-bottom: 12rem;
+        margin-top: 1rem;
+    }
+
+    .market .title {
+        font-size: 20px; 
+        margin-bottom: 10px; 
+    }
+
+    .market.widgets {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .crypto-widget {
+        border-radius: 8px; 
+        padding: 5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .crypto-widget h4 {
+        font-size: 18px; 
+        margin-bottom: 8px; 
+    }
+
+    .crypto-widget .price span,
+    .crypto-widget .percentage span {
+        font-size: 16px;
+    }
+
+    .bunny {
+        width: 70px;
+    }
+
+    .diamond-text {
+        font-size: 15px; 
+    }
+
+    .whitepaper {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 10px;
+    }
+
+    footer {
+        color: blanchedalmond;
+        font-style: italic;
+    }
+
+    .gif {
+        height: 10rem;
+    }
+}
+
+
+
+
+@media (max-width: 720px) and (max-height: 1024px) {
+
+    #myPieChart {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .supply {
+        text-align: center;
+        width: 100%;
+    }
+
+    .supply .h3 {
+        font-size: 18px;
+        line-height: 1.4; 
+        word-wrap: break-word; 
+    }
+ 
+  
+.market {
+    padding-top: 17px;
+    margin-top: 1rem;
+}
+
+.widgets {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.crypto-widget {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    background-color: #400761;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: wheat;
+    font-family: Arial, sans-serif;
+}
+
+.crypto-widget h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    .crypto-widget .price span,
+    .crypto-widget .percentage span {
+        font-size: 16px;
+    }
+
+    .diamond-text {
+        font-size: 15px; 
+    }
+
+    .whitepaper {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 10px;
+    }
+
+
+}
+
+
+
+/*
+@media (max-width: 600px) and (max-height: 1024px) {
+
+    #myPieChart {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .supply {
+        text-align: center;
+        width: 100%;
+    }
+
+ 
+  
+.market {
+    padding-top: 17px;
+}
+
+.widgets {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+
+.crypto-widget {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    background-color: #400761;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: wheat;
+    font-family: Arial, sans-serif;
+}
+
+.crypto-widget h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+    .crypto-widget .price span,
+    .crypto-widget .percentage span {
+        font-size: 16px;
+    }
+
+    .diamond-text {
+        font-size: 15px; 
+    }
+
+    .whitepaper {
+        width: 80px; 
+        height: 100px; 
+        margin-top: 10px;
+    }
+
+
+}
+
+*/
